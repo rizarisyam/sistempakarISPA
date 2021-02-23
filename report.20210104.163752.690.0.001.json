@@ -1,0 +1,405 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20210104.163752.690.0.001.json",
+    "dumpEventTime": "2021-01-04T16:37:52Z",
+    "dumpEventTimeStamp": "1609753072679",
+    "processId": 690,
+    "cwd": "/home/rizarisyam/code/laravel/sistempakarv2",
+    "commandLine": [
+      "/home/rizarisyam/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/node",
+      "/home/rizarisyam/.vscode-server/extensions/bmewburn.vscode-intelephense-client-1.6.0/node_modules/intelephense/lib/intelephense.js",
+      "--node-ipc",
+      "--clientProcessId=562"
+    ],
+    "nodejsVersion": "v12.14.1",
+    "glibcVersionRuntime": "2.31",
+    "glibcVersionCompiler": "2.17",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "12.14.1",
+      "v8": "7.7.299.13-node.16",
+      "uv": "1.33.1",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.1",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.14.1/node-v12.14.1-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.14.1/node-v12.14.1.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "4.19.128-microsoft-standard",
+    "osVersion": "#1 SMP Tue Jun 23 12:58:10 UTC 2020",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz",
+        "speed": 2400,
+        "user": 335000,
+        "nice": 0,
+        "sys": 235500,
+        "idle": 50227400,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz",
+        "speed": 2400,
+        "user": 197800,
+        "nice": 0,
+        "sys": 179500,
+        "idle": 50496300,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz",
+        "speed": 2400,
+        "user": 260100,
+        "nice": 0,
+        "sys": 228500,
+        "idle": 50327000,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz",
+        "speed": 2400,
+        "user": 212200,
+        "nice": 0,
+        "sys": 131400,
+        "idle": 50534400,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz",
+        "speed": 2400,
+        "user": 363600,
+        "nice": 0,
+        "sys": 231000,
+        "idle": 50235400,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz",
+        "speed": 2400,
+        "user": 179000,
+        "nice": 0,
+        "sys": 153600,
+        "idle": 50559000,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz",
+        "speed": 2400,
+        "user": 280400,
+        "nice": 0,
+        "sys": 215500,
+        "idle": 50338100,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz",
+        "speed": 2400,
+        "user": 203900,
+        "nice": 0,
+        "sys": 131900,
+        "idle": 50548200,
+        "irq": 0
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "eth0",
+        "internal": false,
+        "mac": "00:15:5d:49:39:83",
+        "address": "172.27.116.215",
+        "netmask": "255.255.240.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "eth0",
+        "internal": false,
+        "mac": "00:15:5d:49:39:83",
+        "address": "fe80::215:5dff:fe49:3983",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 4
+      }
+    ],
+    "host": "MSI"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x0000000000b05ba5",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [/home/rizarisyam/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/node]"
+    },
+    {
+      "pc": "0x00000000009dbd93",
+      "symbol": "node::OnFatalError(char const*, char const*) [/home/rizarisyam/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/node]"
+    },
+    {
+      "pc": "0x0000000000b3b18e",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/home/rizarisyam/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/node]"
+    },
+    {
+      "pc": "0x0000000000b3b509",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/home/rizarisyam/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/node]"
+    },
+    {
+      "pc": "0x0000000000ce68a5",
+      "symbol": " [/home/rizarisyam/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/node]"
+    },
+    {
+      "pc": "0x0000000000ce6f36",
+      "symbol": "v8::internal::Heap::RecomputeLimits(v8::internal::GarbageCollector) [/home/rizarisyam/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/node]"
+    },
+    {
+      "pc": "0x0000000000cf2dca",
+      "symbol": "v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [/home/rizarisyam/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/node]"
+    },
+    {
+      "pc": "0x0000000000cf3cd5",
+      "symbol": "v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/home/rizarisyam/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/node]"
+    },
+    {
+      "pc": "0x0000000000cf66e8",
+      "symbol": "v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationType, v8::internal::AllocationAlignment) [/home/rizarisyam/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/node]"
+    },
+    {
+      "pc": "0x0000000000cbd017",
+      "symbol": "v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationType) [/home/rizarisyam/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/node]"
+    },
+    {
+      "pc": "0x0000000000ff31d9",
+      "symbol": "v8::internal::Runtime_AllocateInOldGeneration(int, unsigned long*, v8::internal::Isolate*) [/home/rizarisyam/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/node]"
+    },
+    {
+      "pc": "0x0000000001376259",
+      "symbol": " [/home/rizarisyam/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/node]"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2156027904,
+    "totalCommittedMemory": 2151548368,
+    "usedMemory": 2142149472,
+    "availableMemory": 46574224,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 32568,
+        "capacity": 261872,
+        "used": 32296,
+        "available": 229576
+      },
+      "new_space": {
+        "memorySize": 4194304,
+        "committedMemory": 473808,
+        "capacity": 2094976,
+        "used": 134848,
+        "available": 1960128
+      },
+      "old_space": {
+        "memorySize": 1842196480,
+        "committedMemory": 1842013896,
+        "capacity": 1835098472,
+        "used": 1834596320,
+        "available": 502152
+      },
+      "code_space": {
+        "memorySize": 1474560,
+        "committedMemory": 1363136,
+        "capacity": 1258400,
+        "used": 1258400,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 2887680,
+        "committedMemory": 2652224,
+        "capacity": 1193040,
+        "used": 1193040,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 304963584,
+        "committedMemory": 304963584,
+        "capacity": 304931016,
+        "used": 304931016,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 3552,
+        "used": 3552,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 2094976,
+        "used": 0,
+        "available": 2094976
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 114.789,
+    "kernelCpuSeconds": 5.80961,
+    "cpuConsumptionPercent": 2.43733,
+    "maxRss": 2429947904,
+    "pageFaults": {
+      "IORequired": 10,
+      "IONotRequired": 918097
+    },
+    "fsActivity": {
+      "reads": 99024,
+      "writes": 32672
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 42.132,
+    "kernelCpuSeconds": 3.00651,
+    "cpuConsumptionPercent": 0.912258,
+    "fsActivity": {
+      "reads": 14512,
+      "writes": 16
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "USER": "rizarisyam",
+    "VSCODE_WSL_EXT_LOCATION": "/mnt/c/Users/rizarisyam/.vscode/extensions/ms-vscode-remote.remote-wsl-0.52.0",
+    "WT_PROFILE_ID": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+    "SHLVL": "1",
+    "HOME": "/home/rizarisyam",
+    "OLDPWD": "/mnt/c/Users/rizarisyam/AppData/Local/Programs/Microsoft VS Code",
+    "WSL_DISTRO_NAME": "Ubuntu-20.04",
+    "LOGNAME": "rizarisyam",
+    "WSL_INTEROP": "/run/WSL/135_interop",
+    "NAME": "Code",
+    "_": "/mnt/c/Users/rizarisyam/AppData/Local/Programs/Microsoft VS Code/bin/code",
+    "TERM": "xterm-256color",
+    "PATH": "/home/rizarisyam/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Intel/WiFi/bin/:/mnt/c/Program Files/Common Files/Intel/WirelessCommon/:/mnt/c/Program Files/dotnet/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Program Files/Java/jdk1.8.0_271/bin:/mnt/c/Users/rizarisyam/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/rizarisyam/.dotnet/tools:/mnt/c/Users/rizarisyam/AppData/Local/Programs/Microsoft VS Code/bin",
+    "VSCODE_AGENT_FOLDER": "/home/rizarisyam/.vscode-server",
+    "WT_SESSION": "7c1c9358-d8d0-475d-8bf9-7a85260cfbba",
+    "LANG": "C.UTF-8",
+    "SHELL": "/bin/zsh",
+    "PWD": "/mnt/c/Users/rizarisyam/AppData/Local/Programs/Microsoft VS Code",
+    "HOSTTYPE": "x86_64",
+    "WSLENV": "ELECTRON_RUN_AS_NODE/w:WT_SESSION::WT_PROFILE_ID",
+    "VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH": "/home/rizarisyam/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/remote/node_modules",
+    "ZSH": "/home/rizarisyam/.oh-my-zsh",
+    "PAGER": "less",
+    "LESS": "-R",
+    "LSCOLORS": "Gxfxcxdxbxegedabagacad",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "AMD_ENTRYPOINT": "vs/server/remoteExtensionHostProcess",
+    "PIPE_LOGGING": "true",
+    "VERBOSE_LOGGING": "true",
+    "VSCODE_EXTHOST_WILL_SEND_SOCKET": "true",
+    "VSCODE_HANDLES_UNCAUGHT_ERRORS": "true",
+    "VSCODE_LOG_STACK": "false",
+    "VSCODE_NLS_CONFIG": "{\"locale\":\"en\",\"availableLanguages\":{}}",
+    "BROWSER": "/home/rizarisyam/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/bin/helpers/browser.sh",
+    "VSCODE_IPC_HOOK_CLI": "/tmp/vscode-ipc-0b33b5bb-9d67-4fe9-a94c-fe4fab720d66.sock",
+    "APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL": "true",
+    "ELECTRON_RUN_AS_NODE": "1",
+    "ELECTRON_NO_ASAR": "1"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": 0,
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 65536,
+      "hard": 65536
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 4096,
+      "hard": 4096
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": "unlimited"
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 50634,
+      "hard": 50634
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "linux-vdso.so.1",
+    "/lib/x86_64-linux-gnu/libdl.so.2",
+    "/lib/x86_64-linux-gnu/libstdc++.so.6",
+    "/lib/x86_64-linux-gnu/libm.so.6",
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    "/lib64/ld-linux-x86-64.so.2",
+    "/lib/x86_64-linux-gnu/libnss_files.so.2",
+    "/lib/x86_64-linux-gnu/libnss_dns.so.2",
+    "/lib/x86_64-linux-gnu/libresolv.so.2"
+  ]
+}
