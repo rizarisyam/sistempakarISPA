@@ -11,20 +11,18 @@
         <div>
             <div class="mb-3 d-flex justify-content-between">
                 <div><h6 class="font-weight-bold">Data Konsultasi</h6></div>
-                <div>
-                    <form action="" method="post">
-                        <button type="submit" class="btn btn-primary"><i class="fas fa-print mr-3"></i>Print</button>
-                    </form>
-                </div>
+                @foreach ($konsultasi as $row)
+                    <input type="text" value="{{$row->id}}" name="konsultasi_id">
+                    <div>
+                        <form action="{{route('print.konsulbyid', $row->id)}}" method="get">
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-print mr-3"></i>Print</button>
+                        </form>
+                    </div>
+                    @endforeach
             </div>
 
             <table class="table table-hover">
-                {{-- <thead>
-                <tr>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                </tr>
-            </thead> --}}
+
                 <tbody>
                     @foreach ($konsultasi as $row)
                     @foreach ($row->variabel as $row)
@@ -58,6 +56,10 @@
                         <tr>
                             <td>Persentase</td>
                             <td>{{number_format(($maxValue * 100), 2)}} %</td>
+                        </tr>
+                        <tr>
+                            <td>Solusi</td>
+                            <td>{{$row->saran}}</td>
                         </tr>
                     @endif
                    @endforeach

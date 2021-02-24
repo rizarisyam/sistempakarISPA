@@ -77,18 +77,23 @@
                     </div>
                 </form>
             </div>
+            <div class="col d-flex align-items-center justify-content-end">
+                <a href="{{route('print.himpunan')}}">
+                    <button type="button" class="btn btn-primary">Print</button>
+                </a>
+            </div>
+            @if (session('pesan'))
             <div class="col-4">
                 <div class="my-4 mb-2">
-                    @if (session('pesan'))
                     <div class="alert alert-success alert-dismissible fade show py-2" role="alert">
                         <strong>Hore!</strong> {{session('pesan')}}.
                         <button type="button" class="close py-2 px-2" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    @endif
                 </div>
             </div>
+            @endif
         </div>
         <div class="table-responsive mt-2">
             <table class="table text-dark">

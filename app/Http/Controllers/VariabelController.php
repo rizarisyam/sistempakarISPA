@@ -7,10 +7,12 @@ use Illuminate\Http\Request;
 
 use App\Imports\VariabelImport;
 use Maatwebsite\Excel\Facades\Excel;
+use Barryvdh\DomPDF\Facade as PDF;
 
 // class requrest khusus untuk method create
 use App\Http\Requests\Variabel\create;
 use App\Services\VariabelService;
+use Carbon\Carbon;
 
 class VariabelController extends Controller
 {
@@ -113,7 +115,16 @@ class VariabelController extends Controller
     public function importExcel(Request $request)
     {
         Excel::import(new VariabelImport, $request->file('file'));
-        
+
         return redirect()->route('variabel.index')->with('pesan', "Data berhasil diimport");
+    }
+
+    public function printVariabel()
+    {
+        $data = Variabel::all();
+        $date = date('Y-m-d');
+
+        $pdf = PDF::loadView('variabel.cetak', ['data' => $data, 'date' => $date])->setPaper('A4', 'landscape');
+        return $pdf->stream('laporan-data-variabel-pdf');
     }
 }

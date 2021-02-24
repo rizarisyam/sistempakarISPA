@@ -11,6 +11,8 @@ use App\Services\HimpunanService;
 use App\Imports\HimpunanImport;
 use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
+use Barryvdh\DomPDF\Facade as PDF;
+use Carbon\Carbon;
 
 class HimpunanController extends Controller
 {
@@ -120,5 +122,13 @@ class HimpunanController extends Controller
         Excel::import(new HimpunanImport, $request->file('file'));
 
         return redirect()->route('himpunan.index')->with('pesan', "Data berhasil diimport");
+    }
+
+    public function printHimpunan()
+    {
+        $data = Himpunan::with('variabel')->get();
+        $date = Carbon::now();
+        $pdf = PDF::loadView('himpunan.cetak', ['data' => $data, 'date' => $date])->setPaper('a4', 'landscape');
+        return $pdf->download();
     }
 }

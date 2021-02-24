@@ -75,20 +75,24 @@ Route::middleware(['role:admin'])->group(function () {
 
 
         Route::post('/variabel/import-excel', [VariabelController::class, 'importExcel'])->name('variabel.excel');
+        Route::get('/variabel/cetak_variabel', [VariabelController::class, 'printVariabel'])->name('print.variabel');
         Route::resource('/variabel', VariabelController::class);
 
         Route::post('himpunan/import-excel', [HimpunanController::class, 'importExcel'])->name('himpunan.excel');
+        Route::get('/himpunan/cetak-himpunan', [HimpunanController::class, 'printHimpunan'])->name('print.himpunan');
         Route::resource('/himpunan', HimpunanController::class);
 
         Route::post('keputusan/import-excel', [KeputusanController::class, 'importExcel'])->name('keputusan.excel');
+        Route::get('keputusan/cetak_keputusan', [KeputusanController::class, 'printKeputusan'])->name('print.keputusan');
         Route::resource('/keputusan', KeputusanController::class);
 
         // Aturan
         Route::get('/aturan/{id}/edit/detail-aturan', [AturanController::class, 'editDetailAturan'])->name('edit.detailaturan');
         Route::patch('/aturan/{id}/update/detail-aturan', [AturanController::class, 'updateDetailAturan'])->name('update.detailaturan');
-        Route::resource('/aturan', AturanController::class);
         Route::get('/aturan/{id}/detail-aturan', [AturanController::class, 'aturanHimpunan'])->name('aturan.himpunan');
         Route::post('/aturan-detail/{id}', [AturanController::class, 'handleAturanDetail'])->name('handle.detailaturan');
+        Route::get('/aturan/cetak_aturan', [AturanController::class, 'printAturan'])->name('print.aturan');
+        Route::resource('/aturan', AturanController::class);
         // Route::get('/show-konsultasi', [KonsultasiController::class, 'showKonsultasi'])->name('show.konsultasi');
 
         // Route konsultasi
@@ -97,6 +101,7 @@ Route::middleware(['role:admin'])->group(function () {
             Route::post('/admin-konsultasi/simpan-pertanyaan', [AdminKonsultasiController::class, 'handleKonsultasi'])->name('admin.konsultasi.simpan');
             Route::get('/admin-konsultasi/daftar-pertanyaan', [AdminKonsultasiController::class, 'konsultasi'])->name('admin.konsultasi.pertanyaan');
             Route::get('/admin-konsultasi/show-diagnosa', [AdminKonsultasiController::class, 'showDiagnosa'])->name('admin.konsultasi.showDiagnosa');
+            Route::get('/admin-konsultasi/cetak-konsultasi-byid/{id}', [AdminKonsultasiController::class, 'printKonsultasiById'])->name('print.konsulbyid');
             Route::resource('/admin-konsultasi', AdminKonsultasiController::class);
 
 

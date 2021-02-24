@@ -6,7 +6,9 @@ use App\Models\Aturan;
 use App\Models\Keputusan;
 use App\Models\Variabel;
 use App\Services\AturanService;
+use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Http\Request;
+
 
 class AturanController extends Controller
 {
@@ -148,5 +150,13 @@ class AturanController extends Controller
         $aturan->himpunan()->attach(array_filter($request->input('himpunan_id')));
 
         return redirect()->route('aturan.index')->with('pesan', "Detail aturan berhasil diinput");
+    }
+
+    public function printAturan()
+    {
+        $data = Aturan::with(['himpunan', 'keputusan'])->get();
+        $date = date('d-m-Y');
+        return PDF::loadView('aturan.cetak', ['data' => $data, 'date' => $date])->setPaper('A4', 'landscape')->stream('Laporan-basis-pengetahuan-pdf');
+
     }
 }

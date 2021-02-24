@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests\Keputusan\store;
 use App\Services\KeputusanService;
 
+use Barryvdh\DomPDF\Facade as PDF;
+
 use App\Imports\KeputusanImport;
 use Maatwebsite\Excel\Facades\Excel;
 class KeputusanController extends Controller
@@ -116,5 +118,14 @@ class KeputusanController extends Controller
         Excel::import(new KeputusanImport, $request->file('file'));
 
         return redirect()->route('keputusan.index')->with('pesan', "Data berhasil diimport");
+    }
+
+    public function printKeputusan()
+    {
+        $data = Keputusan::all();
+        $date = date('Y-m-d');
+
+        $pdf = PDF::loadView('keputusan.cetak', ['data' => $data, 'date' => $date])->setPaper('A4', 'landscape');
+        return $pdf->stream('laporan-data-penyakit-pdf');
     }
 }

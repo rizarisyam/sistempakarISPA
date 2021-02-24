@@ -25,7 +25,7 @@
                             <span class="ml-2">Tambah</span></a>
                     </div>
 
-                  </div>
+                </div>
 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
@@ -45,7 +45,7 @@
                                     <div class="custom-file">
                                         <input type="file" name="file" class="custom-file-input" id="customFile">
                                         <label class="custom-file-label" for="customFile">Choose file</label>
-                                      </div>
+                                    </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -72,18 +72,23 @@
                     </div>
                 </form>
             </div>
+            <div class="col d-flex align-items-center justify-content-end">
+                <a href="{{route('print.variabel')}}">
+                    <button type="button" class="btn btn-primary">Print</button>
+                </a>
+            </div>
+            @if (session('pesan'))
             <div class="col-4">
                 <div class="my-4 mb-2">
-                    @if (session('pesan'))
                     <div class="alert alert-success alert-dismissible fade show py-2" role="alert">
                         <strong>Hore!</strong> {{session('pesan')}}.
                         <button type="button" class="close py-2 px-2" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    @endif
                 </div>
             </div>
+            @endif
         </div>
         <div class="table-responsive mt-2">
             <table class="table text-dark" id="tableVariabel">
