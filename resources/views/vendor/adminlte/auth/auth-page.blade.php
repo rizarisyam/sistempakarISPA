@@ -16,12 +16,13 @@
 @section('classes_body'){{ ($auth_type ?? 'login') . '-page' }}@stop
 
 @section('body')
+<div id="wrapper-body">
     <div class="{{ $auth_type ?? 'login' }}-box">
 
         {{-- Logo --}}
         <div class="{{ $auth_type ?? 'login' }}-logo">
             <a href="{{ $dashboard_url }}">
-                <span><i class="fas fa-user" style="font-size: 10rem"></i></span>
+                <span><i class="fas fa-user" style="font-size: 7rem"></i></span>
             </a>
         </div>
 
@@ -53,6 +54,7 @@
         </div>
 
     </div>
+</div>
 @stop
 
 @section('adminlte_js')

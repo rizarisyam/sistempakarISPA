@@ -6,7 +6,7 @@
     <style>
         body {
             margin: 0;
-            padding: 1rem 2rem;
+            padding: 0 2rem;
         }
         table {
             border-collapse: collapse;
@@ -39,11 +39,7 @@
             <tbody>
                 <tr>
                     <td>Nama</td>
-                    <td>
-                        @foreach ($konsultasi as $row)
-                            {{$row->user->name}}
-                        @endforeach
-                    </td>
+                    <td>{{\Auth::user()->name}}</td>
                 </tr>
                 <tr>
                     <td>Tanggal</td>

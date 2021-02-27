@@ -38,6 +38,8 @@ class KonsultasiService
         $variabel = Variabel::with('himpunan')->get();
         $konsultasi = Konsultasi::with('variabel')->where('user_id', auth()->id())->latest()->first();
 
+        // dd($konsultasi);
+
         $fuzzyUser = [];
         foreach ($konsultasi->variabel as $key => $value) {
             array_push($fuzzyUser, json_decode($value->pivot->nilai));
@@ -52,6 +54,7 @@ class KonsultasiService
         }
         $fuzzyhimpunan = array_chunk($fuzzyhimpunan, 2);
 
+        
         $fuzzy1 = [];
         $fuzzy2 = [];
         foreach ($fuzzyUser as $key => $value) {
@@ -60,7 +63,7 @@ class KonsultasiService
                 $value += 0;
             }
 
-            // dump($fuzzyhimpunan[$key]);
+            // dd($fuzzyhimpunan[$key][0]);
 
 
             if ($fuzzyhimpunan[$key][0]) {
@@ -1215,7 +1218,7 @@ class KonsultasiService
         $maxIndex = null;
         $maxValue = max($data);
 
-        
+
 
     }
 }

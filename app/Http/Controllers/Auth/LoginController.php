@@ -52,7 +52,7 @@ class LoginController extends Controller
                 return route('user.dashboard');
                 break;
             default:
-                return route('home');
+                return route('login');
                 break;
         }
     }

@@ -130,6 +130,7 @@ Route::middleware(['role:user'])->group(function () {
         Route::resource('/user-konsultasi', UserKonsultasiController::class);
     // });
 
+    Route::get('/history-user/cetak-konsul/{id}', [HistoryUserController::class, 'cetakKonsultasi'])->name('user.print.konsul');
     Route::resource('/history-user', HistoryUserController::class);
 
     Route::get('/user-setting/{id}/editpass', [UserController::class, 'editpass'])->name('user-setting.editpass');

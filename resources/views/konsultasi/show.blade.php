@@ -10,15 +10,17 @@
     <div class="card-body">
         <div>
             <div class="mb-3 d-flex justify-content-between">
-                <div><h6 class="font-weight-bold">Data Konsultasi</h6></div>
+                <div>
+                    <h6 class="font-weight-bold">Data Konsultasi</h6>
+                </div>
                 @foreach ($konsultasi as $row)
-                    <input type="text" value="{{$row->id}}" name="konsultasi_id">
-                    <div>
-                        <form action="{{route('print.konsulbyid', $row->id)}}" method="get">
-                            <button type="submit" class="btn btn-primary"><i class="fas fa-print mr-3"></i>Print</button>
-                        </form>
-                    </div>
-                    @endforeach
+                <div>
+                    <a href="{{route('print.konsulbyid', $row->id)}}">
+                        <button type="button" class="btn btn-primary"><i class="fas fa-print mr-3"></i>Print</button>
+                    </a>
+
+                </div>
+                @endforeach
             </div>
 
             <table class="table table-hover">
@@ -47,22 +49,22 @@
                 </tr>
             </thead> --}}
                 <tbody>
-                   @foreach ($keputusan as $key => $row)
+                    @foreach ($keputusan as $key => $row)
                     @if ($maxIndex == $key)
-                        <tr>
-                            <td>Terdiagnosa</td>
-                            <td>{{$row->nama}}</td>
-                        </tr>
-                        <tr>
-                            <td>Persentase</td>
-                            <td>{{number_format(($maxValue * 100), 2)}} %</td>
-                        </tr>
-                        <tr>
-                            <td>Solusi</td>
-                            <td>{{$row->saran}}</td>
-                        </tr>
+                    <tr>
+                        <td>Terdiagnosa</td>
+                        <td>{{$row->nama}}</td>
+                    </tr>
+                    <tr>
+                        <td>Persentase</td>
+                        <td>{{number_format(($maxValue * 100), 2)}} %</td>
+                    </tr>
+                    <tr>
+                        <td>Solusi</td>
+                        <td>{{$row->saran}}</td>
+                    </tr>
                     @endif
-                   @endforeach
+                    @endforeach
                 </tbody>
             </table>
         </div>

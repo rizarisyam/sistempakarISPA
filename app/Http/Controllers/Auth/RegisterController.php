@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -29,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    // protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
@@ -51,11 +52,11 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'role' => ['required', 'string', 'max:255'],
+            'role' => ['string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'date' => ['required', 'string', 'max:255'],
-            'gender' => ['required', 'string', 'size:1'],
+            // 'date' => ['string', 'max:255'],
+            // 'gender' => ['string', 'size:1'],
         ]);
     }
 
@@ -69,11 +70,29 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
-            'role' => $data['role'],
+            'role' => 'user',
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'date' => $data['date'],
             'gender' => $data['gender'],
         ]);
+    }
+
+    public function redirectTo()
+    {
+
+        $role = Auth::user()->role;
+
+        switch ($role) {
+            case "admin":
+                return route('admin.dashboard');
+                break;
+            case "user":
+                return route('user.dashboard');
+                break;
+            default:
+                return route('login');
+                break;
+        }
     }
 }

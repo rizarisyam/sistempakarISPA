@@ -24,7 +24,7 @@ class UserController extends Controller
     {
         $users = User::where('role', 'user')->get();
 
-        $pdf = PDF::loadView('admin.users.cetak', ['users' => $users])->setPaper('a4', 'landscape');;
+        $pdf = PDF::loadView('admin.users.cetak', ['users' => $users])->setPaper('A4', 'landscape');;
         return $pdf->stream();
     }
 
@@ -36,6 +36,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->delete();
+        return redirect()->route('users.index')->with('pesan', 'User berhasil dihapus');
     }
 }

@@ -80,9 +80,19 @@
             font-smooth: auto;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: auto;
+
+
+        }
+
+        #wrapper-body {
+            width: 100%;
+            height: 100vh;
             background-image: url('images/bg.jpg') !important;
             background-size: cover !important;
-            
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>

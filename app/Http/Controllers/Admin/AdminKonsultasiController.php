@@ -65,11 +65,14 @@ class AdminKonsultasiController extends Controller
 
     public function printKonsultasiById($id)
     {
+
         $konsultasi = Konsultasi::with('variabel')->where('id', $id)->get();
         $diagnosa = Diagnosa::with('konsultasi')->where('konsultasi_id', $id)->get();
         $keputusan = Keputusan::all();
 
+
         $nilai = array();
+        $date = date("d-m-Y");
         foreach($diagnosa as $row) {
             $nilai = json_decode($row->nilai);
         }
@@ -77,9 +80,14 @@ class AdminKonsultasiController extends Controller
         $maxIndex = null;
         $maxValue = max($nilai);
 
-        $date = date("d-m-Y");
-
         $maxIndex = array_search($maxValue, $nilai);
-        return PDF::loadView('konsultasi.cetakbyid', ['date' => $date, 'konsultasi' => $konsultasi, 'maxIndex' => $maxIndex, 'keputusan' => $keputusan , 'maxValue' => $maxValue])->setPaper('A4', 'landscape')->stream('laporan-konsultasi-pdf');
+
+        $dompdf = PDF::loadView('konsultasi.cetakbyid',compact(['konsultasi', 'maxIndex', 'keputusan', 'maxValue']));
+        // return view('konsultasi.cetakbyid',compact(['konsultasi', 'maxIndex', 'keputusan', 'maxValue', 'date']));
+
+        $dompdf->setPaper('A4', 'landscape');
+        return $dompdf->stream('Diagnosa-'.date('dmY'));
+
+
     }
 }

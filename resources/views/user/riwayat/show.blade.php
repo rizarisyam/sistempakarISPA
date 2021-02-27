@@ -10,9 +10,15 @@
             <div class="mb-3 d-flex justify-content-between">
                 <div><h6 class="font-weight-bold">Data Konsultasi</h6></div>
                 <div>
-                    <form action="" method="post">
+                    @foreach ($konsultasi as $row)
+
+                    <a href="{{route('user.print.konsul', $row->id)}}">
+
                         <button type="submit" class="btn btn-primary"><i class="fas fa-print mr-3"></i>Print</button>
-                    </form>
+
+                    </a>
+                    @endforeach
+
                 </div>
             </div>
 
@@ -25,6 +31,7 @@
             </thead> --}}
                 <tbody>
                     @foreach ($konsultasi as $row)
+                    
                     @foreach ($row->variabel as $row)
 
                     <tr>
