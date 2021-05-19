@@ -54,7 +54,7 @@ class KonsultasiService
         }
         $fuzzyhimpunan = array_chunk($fuzzyhimpunan, 2);
 
-        
+
         $fuzzy1 = [];
         $fuzzy2 = [];
         foreach ($fuzzyUser as $key => $value) {
@@ -130,6 +130,9 @@ class KonsultasiService
         $rules = array();
         foreach ($aturan as $key => $rule) {
 
+            // dump($rule->kode);
+
+
 
             foreach ($rule->himpunan as $key => $value) {
 
@@ -137,24 +140,30 @@ class KonsultasiService
 
                     if ($value->variabel->kode == 'G05') {
                         if ($value->nama == 'Ringan') {
+                            // dump($fuzzyfikasi[4][0]);
                             array_push($rules, array($fuzzyfikasi[4][0]));
                         } else {
+                            // dump($fuzzyfikasi[4][1]);
                             array_push($rules, array($fuzzyfikasi[4][1]));
                         }
                     }
 
                     if ($value->variabel->kode == 'G06') {
                         if ($value->nama == 'Ringan') {
+                            // dump($fuzzyfikasi[5][0]);
                             array_push($rules[0], $fuzzyfikasi[5][0]);
                         } else {
+                            // dump($fuzzyfikasi[5][1]);
                             array_push($rules[0], array($fuzzyfikasi[5][1]));
                         }
                     }
 
                     if ($value->variabel->kode == 'G08') {
                         if ($value->nama == "Ringan") {
+                            // dump($fuzzyfikasi[7][0]);
                             array_push($rules[0], $fuzzyfikasi[7][0]);
                         } else {
+                            // dump($fuzzyfikasi[7][1]);
                             array_push($rules[0], $fuzzyfikasi[7][1]);
                         }
                     }
@@ -163,40 +172,50 @@ class KonsultasiService
                 if ($rule->kode == 'R02') {
                     if ($value->variabel->kode == 'G01') {
                         if ($value->nama == 'Bertahap') {
+                            // dump($fuzzyfikasi[0][0]);
                             array_push($rules, array($fuzzyfikasi[0][0]));
                         } else {
+                            // dump($fuzzyfikasi[0][1]);
                             array_push($rules, array($fuzzyfikasi[0][1]));
                         }
                     }
 
                     if ($value->variabel->kode == 'G11') {
                         if ($value->nama == 'Ringan') {
+                            // dump($fuzzyfikasi[10][0]);
                             array_push($rules[1], $fuzzyfikasi[10][0]);
                         } else {
+                            // dump($fuzzyfikasi[10][1]);
                             array_push($rules[1], array($fuzzyfikasi[10][1]));
                         }
                     }
 
                     if ($value->variabel->kode == 'G14') {
                         if ($value->nama == "Bertahap") {
+                            // dump($fuzzyfikasi[13][0]);
                             array_push($rules[1], $fuzzyfikasi[13][0]);
                         } else {
+                            // dump($fuzzyfikasi[13][1]);
                             array_push($rules[1], $fuzzyfikasi[13][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G15') {
                         if ($value->nama == "Bertahap") {
+                            // dump($fuzzyfikasi[14][0]);
                             array_push($rules[1], $fuzzyfikasi[14][0]);
                         } else {
+                            // dump($fuzzyfikasi[14][1]);
                             array_push($rules[1], $fuzzyfikasi[14][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G16') {
-                        if ($value->nama == "Tidak terjadi") {
+                        if ($value->nama == "Terjadi") {
+                            // dump($fuzzyfikasi[15][0]);
                             array_push($rules[1], $fuzzyfikasi[15][0]);
                         } else {
+                            // dump($fuzzyfikasi[15][1]);
                             array_push($rules[1], $fuzzyfikasi[15][1]);
                         }
                     }
@@ -205,33 +224,40 @@ class KonsultasiService
                 if ($rule->kode == 'R03') {
                     if ($value->variabel->kode == 'G01') {
                         if ($value->nama == 'Bertahap') {
+                            // dump($fuzzyfikasi[0][0]);
                             array_push($rules, array($fuzzyfikasi[0][0]));
                         } else {
+                            // dump($fuzzyfikasi[0][1]);
                             array_push($rules, array($fuzzyfikasi[0][1]));
                         }
                     }
 
                     if ($value->variabel->kode == 'G05') {
                         if ($value->nama == 'Ringan') {
-
+                            // dump($fuzzyfikasi[4][0]);
                             array_push($rules[2], $fuzzyfikasi[4][0]);
                         } else {
+                            // dump($fuzzyfikasi[4][1]);
                             array_push($rules[2], $fuzzyfikasi[4][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G10') {
                         if ($value->nama == "Ringan") {
+                            // dump($fuzzyfikasi[9][0]);
                             array_push($rules[2], $fuzzyfikasi[9][0]);
                         } else {
+                            // dump($fuzzyfikasi[9][1]);
                             array_push($rules[2], $fuzzyfikasi[9][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G15') {
                         if ($value->nama == "Bertahap") {
+                            // dump($fuzzyfikasi[14][0]);
                             array_push($rules[2], $fuzzyfikasi[14][0]);
                         } else {
+                            // dump($fuzzyfikasi[14][1]);
                             array_push($rules[2], $fuzzyfikasi[14][1]);
                         }
                     }
@@ -240,56 +266,70 @@ class KonsultasiService
                 if ($rule->kode == 'R04') {
                     if ($value->variabel->kode == 'G01') {
                         if ($value->nama == 'Bertahap') {
+                            // dump($fuzzyfikasi[][0]);
                             array_push($rules, array($fuzzyfikasi[0][0]));
                         } else {
+                            // dump($fuzzyfikasi[0][1]);
                             array_push($rules, array($fuzzyfikasi[0][1]));
                         }
                     }
 
                     if ($value->variabel->kode == 'G02') {
                         if ($value->nama == 'Ringan') {
+                            // dump($fuzzyfikasi[1][0]);
                             array_push($rules[3], $fuzzyfikasi[1][0]);
                         } else {
+                            // dump($fuzzyfikasi[1][1]);
                             array_push($rules[3], $fuzzyfikasi[1][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G07') {
-                        if ($value->nama == "Tidak terjadi") {
+                        if ($value->nama == "Terjadi") {
+                            // dump($fuzzyfikasi[6][0]);
                             array_push($rules[3], $fuzzyfikasi[6][0]);
                         } else {
+                            // dump($fuzzyfikasi[6][1]);
                             array_push($rules[3], $fuzzyfikasi[6][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G09') {
                         if ($value->nama == "Tidak mengganggu") {
+                            // dump($fuzzyfikasi[8][0]);
                             array_push($rules[3], $fuzzyfikasi[8][0]);
                         } else {
+                            // dump($fuzzyfikasi[8][1]);
                             array_push($rules[3], $fuzzyfikasi[8][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G11') {
                         if ($value->nama == "Ringan") {
+                            // dump($fuzzyfikasi[10][0]);
                             array_push($rules[3], $fuzzyfikasi[10][0]);
                         } else {
+                            // dump($fuzzyfikasi[10][1]);
                             array_push($rules[3], $fuzzyfikasi[10][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G12') {
-                        if ($value->nama == "Tidak terjadi") {
+                        if ($value->nama == "Terjadi") {
+                            // dump($fuzzyfikasi[11][0]);
                             array_push($rules[3], $fuzzyfikasi[11][0]);
                         } else {
+                            // dump($fuzzyfikasi[11][1]);
                             array_push($rules[3], $fuzzyfikasi[11][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G14') {
                         if ($value->nama == "Bertahap") {
+                            // dump($fuzzyfikasi[13][0]);
                             array_push($rules[3], $fuzzyfikasi[13][0]);
                         } else {
+                            // dump($fuzzyfikasi[13][1]);
                             array_push($rules[3], $fuzzyfikasi[13][1]);
                         }
                     }
@@ -298,49 +338,61 @@ class KonsultasiService
                 if ($rule->kode == 'R05') {
                     if ($value->variabel->kode == 'G02') {
                         if ($value->nama == 'Ringan') {
+                            // dump($fuzzyfikasi[1][0]);
                             array_push($rules, array($fuzzyfikasi[1][0]));
                         } else {
+                            // dump($fuzzyfikasi[1][1]);
                             array_push($rules, array($fuzzyfikasi[1][1]));
                         }
                     }
 
                     if ($value->variabel->kode == 'G03') {
                         if ($value->nama == 'Bertahap') {
+                            // dump($fuzzyfikasi[2][0]);
                             array_push($rules[4], $fuzzyfikasi[2][0]);
                         } else {
+                            // dump($fuzzyfikasi[2][1]);
                             array_push($rules[4], $fuzzyfikasi[2][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G04') {
                         if ($value->nama == "Ringan") {
+                            // dump($fuzzyfikasi[3][0]);
                             array_push($rules[4], $fuzzyfikasi[3][0]);
                         } else {
+                            // dump($fuzzyfikasi[3][1]);
                             array_push($rules[4], $fuzzyfikasi[3][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G05') {
                         if ($value->nama == "Ringan") {
+                            // dump($fuzzyfikasi[4][0]);
                             array_push($rules[4], $fuzzyfikasi[4][0]);
                         } else {
+                            // dump($fuzzyfikasi[4][1]);
                             array_push($rules[4], $fuzzyfikasi[4][1]);
                         }
                     }
 
 
                     if ($value->variabel->kode == 'G12') {
-                        if ($value->nama == "Tidak terjadi") {
+                        if ($value->nama == "Terjadi") {
+                            // dump($fuzzyfikasi[11][0]);
                             array_push($rules[4], $fuzzyfikasi[11][0]);
                         } else {
+                            // dump($fuzzyfikasi[11][1]);
                             array_push($rules[4], $fuzzyfikasi[11][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G13') {
                         if ($value->nama == "Bertahap") {
+                            // dump($fuzzyfikasi[12][0]);
                             array_push($rules[4], $fuzzyfikasi[12][0]);
                         } else {
+                            // dump($fuzzyfikasi[12][1]);
                             array_push($rules[4], $fuzzyfikasi[12][1]);
                         }
                     }
@@ -406,7 +458,7 @@ class KonsultasiService
                     }
 
                     if ($value->variabel->kode == 'G16') {
-                        if ($value->nama == "Tidak Terjadi") {
+                        if ($value->nama == "Terjadi") {
                             array_push($rules[6], $fuzzyfikasi[15][0]);
                         } else {
                             array_push($rules[6], $fuzzyfikasi[15][1]);
@@ -448,7 +500,7 @@ class KonsultasiService
                     }
 
                     if ($value->variabel->kode == 'G12') {
-                        if ($value->nama == "Tidak terjadi") {
+                        if ($value->nama == "Terjadi") {
                             array_push($rules[7], $fuzzyfikasi[11][0]);
                         } else {
                             array_push($rules[7], $fuzzyfikasi[11][1]);
@@ -516,7 +568,7 @@ class KonsultasiService
                     }
 
                     if ($value->variabel->kode == 'G07') {
-                        if ($value->nama == "Tidak terjadi") {
+                        if ($value->nama == "Terjadi") {
                             array_push($rules[9], $fuzzyfikasi[6][0]);
                         } else {
                             array_push($rules[9], $fuzzyfikasi[6][1]);
@@ -540,7 +592,7 @@ class KonsultasiService
                     }
 
                     if ($value->variabel->kode == 'G12') {
-                        if ($value->nama == "Tidak terjadi") {
+                        if ($value->nama == "Terjadi") {
                             array_push($rules[9], $fuzzyfikasi[11][0]);
                         } else {
                             array_push($rules[9], $fuzzyfikasi[11][1]);
@@ -666,24 +718,30 @@ class KonsultasiService
 
                     if ($value->variabel->kode == 'G05') {
                         if ($value->nama == 'Ringan') {
+                            // dump($fuzzyfikasi[4][0]);
                             array_push($rules, array($fuzzyfikasi[4][0]));
                         } else {
+                            // dump($fuzzyfikasi[4][1]);
                             array_push($rules, array($fuzzyfikasi[4][1]));
                         }
                     }
 
                     if ($value->variabel->kode == 'G06') {
                         if ($value->nama == 'Ringan') {
+                            // dump($fuzzyfikasi[5][0]);
                             array_push($rules[0], $fuzzyfikasi[5][0]);
                         } else {
+                            // dump($fuzzyfikasi[5][1]);
                             array_push($rules[0], array($fuzzyfikasi[5][1]));
                         }
                     }
 
                     if ($value->variabel->kode == 'G08') {
                         if ($value->nama == "Ringan") {
+                            // dump($fuzzyfikasi[7][0]);
                             array_push($rules[0], $fuzzyfikasi[7][0]);
                         } else {
+                            // dump($fuzzyfikasi[7][1]);
                             array_push($rules[0], $fuzzyfikasi[7][1]);
                         }
                     }
@@ -692,40 +750,50 @@ class KonsultasiService
                 if ($rule->kode == 'R02') {
                     if ($value->variabel->kode == 'G01') {
                         if ($value->nama == 'Bertahap') {
+                            // dump($fuzzyfikasi[0][0]);
                             array_push($rules, array($fuzzyfikasi[0][0]));
                         } else {
+                            // dump($fuzzyfikasi[0][1]);
                             array_push($rules, array($fuzzyfikasi[0][1]));
                         }
                     }
 
                     if ($value->variabel->kode == 'G11') {
                         if ($value->nama == 'Ringan') {
+                            // dump($fuzzyfikasi[10][0]);
                             array_push($rules[1], $fuzzyfikasi[10][0]);
                         } else {
+                            // dump($fuzzyfikasi[10][1]);
                             array_push($rules[1], array($fuzzyfikasi[10][1]));
                         }
                     }
 
                     if ($value->variabel->kode == 'G14') {
                         if ($value->nama == "Bertahap") {
+                            // dump($fuzzyfikasi[13][0]);
                             array_push($rules[1], $fuzzyfikasi[13][0]);
                         } else {
+                            // dump($fuzzyfikasi[13][1]);
                             array_push($rules[1], $fuzzyfikasi[13][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G15') {
                         if ($value->nama == "Bertahap") {
+                            // dump($fuzzyfikasi[14][0]);
                             array_push($rules[1], $fuzzyfikasi[14][0]);
                         } else {
+                            // dump($fuzzyfikasi[14][1]);
                             array_push($rules[1], $fuzzyfikasi[14][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G16') {
-                        if ($value->nama == "Tidak terjadi") {
+                        if ($value->nama == "Terjadi") {
+                            // dump($fuzzyfikasi[15][0]);
                             array_push($rules[1], $fuzzyfikasi[15][0]);
                         } else {
+                            // dump($fuzzyfikasi[15][1]);
                             array_push($rules[1], $fuzzyfikasi[15][1]);
                         }
                     }
@@ -734,33 +802,40 @@ class KonsultasiService
                 if ($rule->kode == 'R03') {
                     if ($value->variabel->kode == 'G01') {
                         if ($value->nama == 'Bertahap') {
+                            // dump($fuzzyfikasi[0][0]);
                             array_push($rules, array($fuzzyfikasi[0][0]));
                         } else {
+                            // dump($fuzzyfikasi[0][1]);
                             array_push($rules, array($fuzzyfikasi[0][1]));
                         }
                     }
 
                     if ($value->variabel->kode == 'G05') {
                         if ($value->nama == 'Ringan') {
-
+                            // dump($fuzzyfikasi[4][0]);
                             array_push($rules[2], $fuzzyfikasi[4][0]);
                         } else {
+                            // dump($fuzzyfikasi[4][1]);
                             array_push($rules[2], $fuzzyfikasi[4][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G10') {
                         if ($value->nama == "Ringan") {
+                            // dump($fuzzyfikasi[9][0]);
                             array_push($rules[2], $fuzzyfikasi[9][0]);
                         } else {
+                            // dump($fuzzyfikasi[9][1]);
                             array_push($rules[2], $fuzzyfikasi[9][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G15') {
                         if ($value->nama == "Bertahap") {
+                            // dump($fuzzyfikasi[14][0]);
                             array_push($rules[2], $fuzzyfikasi[14][0]);
                         } else {
+                            // dump($fuzzyfikasi[14][1]);
                             array_push($rules[2], $fuzzyfikasi[14][1]);
                         }
                     }
@@ -769,56 +844,70 @@ class KonsultasiService
                 if ($rule->kode == 'R04') {
                     if ($value->variabel->kode == 'G01') {
                         if ($value->nama == 'Bertahap') {
+                            // dump($fuzzyfikasi[][0]);
                             array_push($rules, array($fuzzyfikasi[0][0]));
                         } else {
+                            // dump($fuzzyfikasi[0][1]);
                             array_push($rules, array($fuzzyfikasi[0][1]));
                         }
                     }
 
                     if ($value->variabel->kode == 'G02') {
                         if ($value->nama == 'Ringan') {
+                            // dump($fuzzyfikasi[1][0]);
                             array_push($rules[3], $fuzzyfikasi[1][0]);
                         } else {
+                            // dump($fuzzyfikasi[1][1]);
                             array_push($rules[3], $fuzzyfikasi[1][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G07') {
-                        if ($value->nama == "Tidak terjadi") {
+                        if ($value->nama == "Terjadi") {
+                            // dump($fuzzyfikasi[6][0]);
                             array_push($rules[3], $fuzzyfikasi[6][0]);
                         } else {
+                            // dump($fuzzyfikasi[6][1]);
                             array_push($rules[3], $fuzzyfikasi[6][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G09') {
                         if ($value->nama == "Tidak mengganggu") {
+                            // dump($fuzzyfikasi[8][0]);
                             array_push($rules[3], $fuzzyfikasi[8][0]);
                         } else {
+                            // dump($fuzzyfikasi[8][1]);
                             array_push($rules[3], $fuzzyfikasi[8][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G11') {
                         if ($value->nama == "Ringan") {
+                            // dump($fuzzyfikasi[10][0]);
                             array_push($rules[3], $fuzzyfikasi[10][0]);
                         } else {
+                            // dump($fuzzyfikasi[10][1]);
                             array_push($rules[3], $fuzzyfikasi[10][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G12') {
-                        if ($value->nama == "Tidak terjadi") {
+                        if ($value->nama == "Terjadi") {
+                            // dump($fuzzyfikasi[11][0]);
                             array_push($rules[3], $fuzzyfikasi[11][0]);
                         } else {
+                            // dump($fuzzyfikasi[11][1]);
                             array_push($rules[3], $fuzzyfikasi[11][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G14') {
                         if ($value->nama == "Bertahap") {
+                            // dump($fuzzyfikasi[13][0]);
                             array_push($rules[3], $fuzzyfikasi[13][0]);
                         } else {
+                            // dump($fuzzyfikasi[13][1]);
                             array_push($rules[3], $fuzzyfikasi[13][1]);
                         }
                     }
@@ -827,49 +916,61 @@ class KonsultasiService
                 if ($rule->kode == 'R05') {
                     if ($value->variabel->kode == 'G02') {
                         if ($value->nama == 'Ringan') {
+                            // dump($fuzzyfikasi[1][0]);
                             array_push($rules, array($fuzzyfikasi[1][0]));
                         } else {
+                            // dump($fuzzyfikasi[1][1]);
                             array_push($rules, array($fuzzyfikasi[1][1]));
                         }
                     }
 
                     if ($value->variabel->kode == 'G03') {
                         if ($value->nama == 'Bertahap') {
+                            // dump($fuzzyfikasi[2][0]);
                             array_push($rules[4], $fuzzyfikasi[2][0]);
                         } else {
+                            // dump($fuzzyfikasi[2][1]);
                             array_push($rules[4], $fuzzyfikasi[2][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G04') {
                         if ($value->nama == "Ringan") {
+                            // dump($fuzzyfikasi[3][0]);
                             array_push($rules[4], $fuzzyfikasi[3][0]);
                         } else {
+                            // dump($fuzzyfikasi[3][1]);
                             array_push($rules[4], $fuzzyfikasi[3][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G05') {
                         if ($value->nama == "Ringan") {
+                            // dump($fuzzyfikasi[4][0]);
                             array_push($rules[4], $fuzzyfikasi[4][0]);
                         } else {
+                            // dump($fuzzyfikasi[4][1]);
                             array_push($rules[4], $fuzzyfikasi[4][1]);
                         }
                     }
 
 
                     if ($value->variabel->kode == 'G12') {
-                        if ($value->nama == "Tidak terjadi") {
+                        if ($value->nama == "Terjadi") {
+                            // dump($fuzzyfikasi[11][0]);
                             array_push($rules[4], $fuzzyfikasi[11][0]);
                         } else {
+                            // dump($fuzzyfikasi[11][1]);
                             array_push($rules[4], $fuzzyfikasi[11][1]);
                         }
                     }
 
                     if ($value->variabel->kode == 'G13') {
                         if ($value->nama == "Bertahap") {
+                            // dump($fuzzyfikasi[12][0]);
                             array_push($rules[4], $fuzzyfikasi[12][0]);
                         } else {
+                            // dump($fuzzyfikasi[12][1]);
                             array_push($rules[4], $fuzzyfikasi[12][1]);
                         }
                     }
@@ -935,7 +1036,7 @@ class KonsultasiService
                     }
 
                     if ($value->variabel->kode == 'G16') {
-                        if ($value->nama == "Tidak Terjadi") {
+                        if ($value->nama == "Terjadi") {
                             array_push($rules[6], $fuzzyfikasi[15][0]);
                         } else {
                             array_push($rules[6], $fuzzyfikasi[15][1]);
@@ -977,7 +1078,7 @@ class KonsultasiService
                     }
 
                     if ($value->variabel->kode == 'G12') {
-                        if ($value->nama == "Tidak terjadi") {
+                        if ($value->nama == "Terjadi") {
                             array_push($rules[7], $fuzzyfikasi[11][0]);
                         } else {
                             array_push($rules[7], $fuzzyfikasi[11][1]);
@@ -1045,7 +1146,7 @@ class KonsultasiService
                     }
 
                     if ($value->variabel->kode == 'G07') {
-                        if ($value->nama == "Tidak terjadi") {
+                        if ($value->nama == "Terjadi") {
                             array_push($rules[9], $fuzzyfikasi[6][0]);
                         } else {
                             array_push($rules[9], $fuzzyfikasi[6][1]);
@@ -1069,7 +1170,7 @@ class KonsultasiService
                     }
 
                     if ($value->variabel->kode == 'G12') {
-                        if ($value->nama == "Tidak terjadi") {
+                        if ($value->nama == "Terjadi") {
                             array_push($rules[9], $fuzzyfikasi[11][0]);
                         } else {
                             array_push($rules[9], $fuzzyfikasi[11][1]);

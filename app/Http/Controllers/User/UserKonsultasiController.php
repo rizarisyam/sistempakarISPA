@@ -165,6 +165,7 @@ class UserKonsultasiController extends Controller
 
     public function showDiagnosa()
     {
+        // dd($this->konsul->min());
         $konsul_id = User::findOrFail(auth()->id())->konsultasi()->latest()->first()->id;
 
         $diagnosa = DB::table('diagnosa')->where('konsultasi_id', $konsul_id)->first();

@@ -1,3 +1,5 @@
+
+
 @extends('adminlte::page')
 
 @section('title', 'Manage Variabel')
@@ -31,17 +33,13 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="">Batas-batas Keputusan</label>
-                                <div class="row">
-                                    <div class="col-12" id="parentcol">
-                                        @foreach (json_decode($keputusan->batas) as $item)
-                                        <input type="text"
-                                            class="form-control mb-2 @error('batas[]') is-invalid @enderror"
-                                            name="batas[]" value="{{$item}}">
-                                        @endforeach
-
-                                    </div>
-                                </div>
+                                <label for="keterangan" style="font-size: 1rem !important">Keterangan</label>
+                                <textarea name="keterangan" id="keterangan" cols="30" rows="10">{{old('keterangan') ?? $keputusan->keterangan}}</textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="saran" style="font-size: 1rem !important">Saran</label>
+                                <textarea name="saran" id="saran" cols="30" rows="10">{{old('saran') ?? $keputusan->saran}}</textarea>
                             </div>
 
                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -80,5 +78,17 @@
 @stop
 
 @section('js')
+<script>
+    $(document).ready(function() {
 
+    CKEDITOR.replace('keterangan', {
+        language: 'id'
+    });
+    CKEDITOR.replace('saran', {
+        language: 'id'
+    });
+    CKEDITOR.config.allowedContent = true;
+
+})
+</script>
 @stop
